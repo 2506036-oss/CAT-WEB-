@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanaflow Student Registration</title>
+    <style>
+       
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        
+        .form-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 450px;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        
+        .logo {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 800;
+            color: #6c5ce7; 
+            margin-bottom: 5px;
+            display: block;
+            letter-spacing: -1px;
+        }
+        .logo span {
+            color: #00b894; 
+        }
+
+        
+        h2 {
+            text-align: center;
+            color: #2d3436;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+
+        
+        label {
+            display: inline-block;
+            border: 2px solid #6c5ce7; 
+            padding: 5px 12px;        
+            border-radius: 6px;
+            background-color: #f1f0ff;
+            color: #6c5ce7;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+       
+        .form-group {
+            margin-bottom: 20px; 
+        }
+
+        
+        input[type="text"], 
+        input[type="email"], 
+        input[type="date"], 
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dfe6e9;
+            border-radius: 5px;
+            box-sizing: border-box; 
+        }
+
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease; 
+        }
+
+        .btn-submit {
+            background-color: #00b894;
+            color: white;
+        }
+
+        .btn-reset {
+            background-color: #ff7675;
+            color: white;
+        }
+
+       
+        .btn-submit:hover {
+            background-color: #00a884;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 184, 148, 0.3);
+        }
+
+        .btn-reset:hover {
+            background-color: #ee5253;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(255, 118, 117, 0.3);
+        }
+
+       
+        button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="logo">Nana<span>flow</span></div>
+
+    <h2>Student Registration</h2>
+
+    <form action="#">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label><br>
+            <input type="radio" id="male" name="gender" value="male"> Male
+            <input type="radio" id="female" name="gender" value="female"> Female
+        </div>
+
+        <div class="form-group">
+            <label>Hobbies</label><br>
+            <input type="checkbox" name="hobby" value="reading"> Reading
+            <input type="checkbox" name="hobby" value="sports"> Sports
+            <input type="checkbox" name="hobby" value="coding"> Coding
+            <input type="checkbox" name="hobby" value="music"> Music
+            <input type="checkbox" name="hobby" value="travel"> Travel
+            <input type="checkbox" name="hobby" value="art"> Art
+        </div>
+
+        <div class="form-group">
+            <label for="course">Main Course/Subject</label>
+            <select id="course" name="course">
+                <option value="it">IT</option>
+                <option value="cs">Computer Science</option>
+                <option value="bit">Business IT</option>
+                <option value="ds">Data Science</option>
+            </select>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn-submit">Submit Data</button>
+            <button type="reset" class="btn-reset">Reset Form</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
